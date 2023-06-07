@@ -63,4 +63,3 @@ rememberMyFilms();
 detectPersonalLevel();
 showMyDB(personalMovieDB.privat);
 writeYourGenres();
-

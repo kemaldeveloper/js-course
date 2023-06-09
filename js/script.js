@@ -1,49 +1,30 @@
 "use strict";
 
-// 1)
-// console.log((String(null)));
-// console.log(null);
+// let number = 5; debugger;
 
-// // 2)
+// function logNumber() {
+//   let number = 4; debugger;
+//   console.log(number);
+// }
 
-// console.log(typeof(5 + ''));
+// number = 6;
 
-// const num = 5;
+// logNumber(); debugger;
 
-// console.log("https://vk.com/catalog/" + num);
+function createCounter() {
+  let counter = 0;
 
-const fontSize = 26 + 'px';
+  const myFunction = function() {
+    counter = counter + 1;
+    return counter;
+  };
 
-// To Number
-// 1)
-// console.log(typeof(Number('4')));
-
-// 2)
-// console.log(typeof(+'5'));
-
-// 3)
-
-// console.log(typeof(parseInt("15px", 10)));
-
-// let answer = +prompt("Hello", "");
-
-// To boolean
-// 0, '',  null, undefined, false, Nan;
-
-// 1)
-let swithcer = null;
-if (swithcer) {
-  console.log('Working...');
+  return myFunction;
 }
 
-swithcer = 1;
+const increment = createCounter();
+const c1 = increment();debugger;
+const c2 = increment();debugger;
+const c3 = increment();debugger;
 
-if (swithcer) {
-  console.log('Working...');
-}
-
-// 2)
-console.log(typeof(Boolean('4')));
-
-// 3)
-console.log(typeof(!!"44444"));
+console.log(c1, c2, c3);
